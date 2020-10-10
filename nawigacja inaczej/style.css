@@ -1,0 +1,290 @@
+*
+{
+  margin: 0;
+  padding: 0;
+  font-size: 62.5%;
+  text-decoration: none;
+  list-style: none;
+  font-family: "EB Garamond"serif;
+}
+/******************START*****************/
+body
+{
+  background-color: #444;
+}
+header
+{
+  width: 100%;
+  display: none;
+
+}
+.navbar-upper, .navbar-middle, .navbar-upper-contact
+{
+  height: 30px;
+  background-color: gray;
+  display: flex;
+  flex-flow: row nowrap;
+   justify-content: space-between;
+   align-items:center;
+
+}
+.navbar-upper-contact
+{
+  width: 100%;
+  height: auto;
+}
+.navbar-upper span, .navbar-upper-contact span
+{
+  font-family: 'Montserrat', sans-serif;
+  color:white;
+  font-size: 10px;
+  text-decoration: none;
+  padding: 0 8px;
+
+}
+.navbar-upper-contact span img
+{
+  width: 13px;
+  vertical-align: middle;
+  padding: 0 5px;
+}
+#navbar-rabat
+{
+  display: none;
+}
+@media only screen and (min-width: 950px)
+{
+  .navbar-upper span
+  {
+      padding-left: 50px;
+  }
+  #navbar-rabat
+  {
+    display: flex;
+  }
+  .navbar-upper-contact
+  {
+    width: fit-content;
+    padding-right: 50px;
+  }
+}
+.navbar-middle
+{
+  background-color: black;
+  height: 70px;
+  padding: 0 15px;
+
+}
+.navbar-middle  img
+{
+  width: 250px;
+  padding-top: 2px;
+}
+.btn-toggle-nav
+{
+  width: 55px;
+  height: 60%;
+
+  background-image: url("img/menu.png");
+  background-repeat: no-repeat;
+  background-size: 60%;
+  background-position: center;
+  cursor: pointer;
+  transition: all .4s;
+}
+.btn-toggle-nav:hover
+{
+  background-color: #00BFFF;
+}
+.nav-mobile
+{
+  width: 100vw;
+  background-color: #888;
+    height:100%;
+    position: absolute;
+  top: 0;
+
+  opacity: 0.9;
+
+
+  display: flex;
+  flex-flow: column wrap;
+  align-items: baseline;
+  justify-content: center;
+  overflow: hidden;
+  display: NONE;
+
+}
+.nav-mobile ul
+{
+  text-align: left;
+
+}
+.nav-mobile ul li
+{
+  padding: 13% 35%;
+
+}
+
+.nav-mobile ul li a, .nav-mobile ul li span
+{
+  font-size: 27px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color:black;
+  font-family: 'Montserrat', sans-serif;
+}
+.navbar
+{
+
+  font-family: "EB Garamond" serif;
+
+}
+main
+{
+  width:83%;
+
+  background-color: #444;
+  margin-right: auto;
+  margin-left: auto;
+      border-radius: 4px;
+}
+main span
+{
+  font-family: arial;
+  font-size: 20px;
+
+  color:white;
+  line-height: 60px;
+
+  text-transform: uppercase;
+  text-align: center;
+}
+main ul
+{
+  list-style: none;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+
+}
+main ul li
+{
+  width: 200px;
+  height: 250px;
+   background-color: #888;
+   margin: 10px;
+}
+/*MENU GLOWNE*/
+.wrapper
+{
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(255,255,255,.2),rgba(0,0,0,.9)),url(img/bg.jpg) center no-repeat;
+  background-size: cover;
+
+}
+
+.nav-list
+{
+  display: flex;
+  justify-content: center;
+}
+.nav-item
+{
+  margin-top: 2rem;
+  text-align: center;
+  width: 26vw;
+}
+.arrow
+{
+  border: solid #245f9b;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 2px;
+  outline: 0 .2rem .5rem #b8b8b8;
+}
+.down
+{
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  text-shadow: 0 .2rem .5rem #b8b8b8;
+  color:#245f9b;
+}
+.nav-link
+{
+  font-size: 2rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  color:#245f9b;
+  letter-spacing: .1rem;
+  text-shadow: 0 .2rem .5rem #b8b8b8;
+}
+.dropdown
+{
+  margin-top: 1rem;
+
+  position: relative;
+  z-index: 100;
+  opacity: 0;
+  visibility:hidden;
+
+  height: 0;
+  transform: translateX(10%);
+  transition: 0.3s all;
+}
+.nav-item:hover .dropdown
+{
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+  height: auto;
+  transition: all .2s 0.13s;
+}
+.dropdown-item
+{
+  text-align: left;
+  padding:1.5rem;
+transition: all .6s;
+
+}
+.dropdown-item:hover
+{
+  background-color: rgba(0,0,0,.23);
+
+}
+
+.dropdown-link
+{
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  color:#245f9b;
+}
+.dropdown p
+{
+  font-size:1.6rem;
+  color:#5f6061;
+}
+.dropdown-bg
+{
+
+  background-color: rgba(243,243,243,.93);
+  border-radius: 5px;
+  box-shadow: 0.5rem 1rem #757575;
+  position: absolute;
+  opacity: 0;
+  visibility: hidden;
+  transition: all .3s;
+}
+.dropdown-bg::before
+{
+  content: "";
+  position: absolute;
+  border-left: 1rem solid transparent;
+    border-right: 1rem solid transparent;
+      border-bottom: 1rem solid rgba(243,243,243,.93);
+      top:0;
+      left:50%;
+      transform: translate(-50%, -100%);
+}
